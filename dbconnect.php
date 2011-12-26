@@ -3,8 +3,12 @@
 $connection = mysql_connect('localhost','root','');
 if(!$connection)
 {
-die("Could not connect to database:");
+die("Could not connect to server:");
+}
+if(!mysql_select_db("karandeep"))
+{
+die("Could not connect to database");
 }
 
-$uploaddir = 'users/karandeep/sites/data-engineering/files';
+
 ?>
